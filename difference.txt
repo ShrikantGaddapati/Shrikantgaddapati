@@ -1,0 +1,6 @@
+The main difference between this two methods is that forEach allows you to change elements of original array and returns undefined and map does not allow you to change original array and intended for making new array based on original one.
+
+The filter function, as its name implies, is a function for filtering. He can delete the qualified elements in the array and return them by specifying the filter conditions.
+map function, this function is different from the filter function in that filter() applies the passed function to each element in turn, and then decides whether to reserve or discard depending on whether the return value is true or false. The element. The map will return the value passed to the function return.
+The forEach function can implement traversal of an array. Unlike the map function and the filter function, it has no return value.
+Below we can take a look at their differences.
