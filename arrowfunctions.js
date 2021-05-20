@@ -1,50 +1,32 @@
-// // Arrow functions (also called “fat arrow functions”) are undoubtedly one of the more popular features of ES6. They introduced a new way of writing concise functions.
+// ES6 arrow functions provide you with an alternative way to write a shorter syntax compared to the function expression.
 
-// // Arrow function is one of the features introduced in the ES6 version of JavaScript. It allows you to create functions in a cleaner way compared to regular functions. For example,
+// The following example defines a function expression that adds two numbers:
 
-// // This function
-
-// // // function expression
-// // let x = function(x, y) {
-// //    return x * y;
-// // }
-// // can be written as
-
-// // // using arrow functions
-// // let x = (x, y) => x * y;
-// // using an arrow function.
-
-// Arrow Function Syntax
-// The syntax of the arrow function is:
-
-// let myFunction = (arg1, arg2, ...argN) => {
-//     statement(s)
-// }
-// Here,
-
-// myFunction is the name of the function
-// arg1, arg2, ...argN are the function arguments
-// statement(s) is the function body
-// If the body has single statement or expression, you can write arrow function as:
-
-// let myFunction = (arg1, arg2, ...argN) => expression
-
-let greet = x => console.log(x);
-greet('Hello'); // Hello 
-
-let age = 22;
-
-let welcome = (age < 18) ?
-  () => console.log('Shri') :
-  () => console.log('Akhil');
-
-welcome(); // 
-
-
-let sum = (a, b) => {
-    let result = a + b;
-    return result;
+let add = function(x,y) {
+  return x + y;
 }
+console.log(add(10, 20)); // 30
 
-let result1 = sum(5,7);
-console.log(result1); 
+// The following example uses an arrow function which is equivalent to the above add() function expression:
+
+let add = (x,y) => x + y;
+console.log(add(10, 20)); // 30;
+
+// In this example, the arrow function has one expression x + y so it returns the result of the expression.
+
+// However, if you use the block syntax, you need to specify the return keyword:
+
+let add = (x, y) => { return x + y; };
+
+
+// Arrow functions, introduced in ES6, provides a concise way to write functions in JavaScript.
+// Another significant advantage it offers is the fact that it does not bind its own this. In other words, the context inside arrow functions is lexically or statically defined.
+
+// What do we mean by that?
+
+// Unlike other functions, the value of this inside arrow functions is not dependent on how they are invoked or how they are defined.It depends only on its enclosing context.
+
+
+
+
+
